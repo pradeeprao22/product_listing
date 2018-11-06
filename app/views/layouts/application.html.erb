@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Ecommapp</title>
+    <title> <%= full_title(yield(:title)) %></title>
     <%= csrf_meta_tags %>
 
     <%= csp_meta_tag %>
@@ -9,14 +9,22 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <%= render 'layouts/shim' %>
   </head>
+
   <body>
 
-  <%= render 'layouts/header' %>
+   <%= render 'layouts/header' %>
 
  <div class="container">
-    <%= yield %>
-    <%= render 'layouts/footer' %>
+   <%= yield %>
+
+   <%= render 'layouts/footer' %>
+
+   <% debug(params) if Rails.env.development? %>
  </div>
+
   </body>
+
 </html>
