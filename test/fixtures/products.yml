@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  sku_id: 1
+  date_shipped: 2018-10-24
+  categories: MyText
+  tags: MyText
+  images: MyText
+  pro_price: 1
+
+two:
+  title: MyString
+  sku_id: 1
+  date_shipped: 2018-10-24
+  categories: MyText
+  tags: MyText
+  images: MyText
+  pro_price: 1
