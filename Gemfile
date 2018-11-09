@@ -10,6 +10,7 @@ gem 'jquery-rails'
 #encrypt
 gem 'bcrypt', '3.1.12'
 gem 'faker'
+gem 'react_on_rails', '~> 11.1', '>= 11.1.8'
 #Paginate
 gem 'will_paginate',           '3.1.6'
 gem 'bootstrap-will_paginate', '1.0.0'
