@@ -38,6 +38,11 @@ class User < ActiveRecord::Base
         update_attribute(:remember_digest, nil)
     end
 
+    # User feed
+    def feed
+        Micropost.where("user_id = ?", id)
+    end
+
   private
 
     #Creates and assigns the activation token and digest
