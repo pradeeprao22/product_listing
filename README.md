@@ -12,8 +12,9 @@ It contains following features and you can use it for any website application us
 8. Posts view according to the user profile.
 9. Now user can post a product or content.
 10. Now posts are with the pagination feature.
-11. Coming soon (Implementing react on rails so that our components will be more dynemic)
-12. Images upload is in development using gems
+11. Image upload feature is done using gem ( we can control the size of the image inside the uploader file)
+12. Follow and unfollow feature is in development.
+13. Coming soon (Implementing react on rails so that our components will be more dynamic)
 
 Versions:
 Ruby 2.5.1
