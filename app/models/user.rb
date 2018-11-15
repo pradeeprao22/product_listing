@@ -8,7 +8,7 @@ class User < ActiveRecord::Base
              dependent: :destroy
     has_many :following, through: :active_relationships, source: :followed
     has_many :followers, through: :passive_relationships, source: :follower
-    attr_accessor :remember_token, :activation_token
+    attr_accessor :remember_token, :activation_token, :reset_token
     before_save {self.email = email.downcase}
     before_create :create_activation_digest
     validates :username,  presence: true, length: {maximum: 50}
@@ -69,7 +69,18 @@ class User < ActiveRecord::Base
         following.include?(other_user)
     end
 
+    #Sets the password reset attributes
+    def create_reset_digest
+        self.reset_token = User.new_token
+        update_attribute(:reset_digest, User.digest(reset_token))
+        update_attribute(:reset_sent_at, Time.zone.now)
+    end
+
   private
+    #converst email to a lower case
+    def downcase_email
+        self.email = email.downcase
+    end
 
     #Creates and assigns the activation token and digest
   def create_activation_digest

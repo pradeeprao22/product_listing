@@ -1,5 +1,4 @@
 # Product_Listing
-
 I am building the product listing web application feel free to contribute to this project. 
 It contains following features and you can use it for any website application using rails.
 
@@ -16,8 +15,9 @@ It contains following features and you can use it for any website application us
 11. Image upload feature is done using gem ( we can control the size of the image inside the uploader file)
 12. Follow and un follow feature and with the list of followers and following view.
 13. Implementing user feed according to user following.
-14. Coming soon (Implementing react on rails so that our components will be more dynamic)
-15. Please contribute to this project.
+14. Account activate and password reset system.
+15. Coming soon (Implementing react on rails so that our components will be more dynamic)
+16. Please contribute to this project.
 
 Versions:
 Ruby 2.5.1
