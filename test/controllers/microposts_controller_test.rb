@@ -19,7 +19,6 @@ class MicropostsControllerTest < ActionDispatch::IntegrationTest
     assert_redirected_to login_url
   end
 
-
   test "should redirect destroy for wrong micropost" do
     log_in as(users(:michael))
     micropost = microposts(:ants)
