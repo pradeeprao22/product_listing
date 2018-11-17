@@ -14,6 +14,13 @@ Rails.application.routes.draw do
   post   '/login',   to: 'sessions#create'
   delete '/logout',  to: 'sessions#destroy'
 
+  #short urls
+  get '/short', to: 'short_urls#index'
+  get '/short_url', to:'short_urls#show'
+  get '/short/short_url', to: 'short_urls#short', as: :shorted
+  post '/short_urls/create', to: 'short_urls#create'
+  get '/short_urls/fetch_original_url'
+
   resources :users do
     member do
       get :following, :followers
