@@ -1,7 +1,11 @@
 <%= form_for Micropost.new do |f| %>
   <%= render 'shared/error_messages', object: f.object %>
   <div class="field">
+
     <%= f.text_area :content, placeholder: "Compose new micropost..." %>
+
+    <%= select("post", "micropost_id", Micropost.all.collect {|p| [p.categories, p.id]}, { include_blank: true }) %>
+
   </div>
   <%= f.submit "Post", class: "btn btn-primary" %>
   <span class="picture">
