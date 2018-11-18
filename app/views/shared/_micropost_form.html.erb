@@ -1,16 +1,21 @@
 <%= form_for Micropost.new do |f| %>
+
   <%= render 'shared/error_messages', object: f.object %>
+
   <div class="field">
 
-    <%= f.text_area :content, placeholder: "Compose new micropost..." %>
+    <%= f.text_area :content, placeholder: "Post a product" %>
 
-    <%= select("post", "micropost_id", Micropost.all.collect {|p| [p.categories, p.id]}, { include_blank: true }) %>
+    <%= select("post", "micropost_id", Micropost.all.collect {|p| [p.categories_id, p.id]}, { include_blank: true }) %>
 
   </div>
+
   <%= f.submit "Post", class: "btn btn-primary" %>
+
   <span class="picture">
     <%= f.file_field :picture, accept: 'image/jpeg,image/gif,image/png' %>
   </span>
+
 <% end %>
 
 <script type="text/javascript">

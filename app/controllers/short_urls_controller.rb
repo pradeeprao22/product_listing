@@ -1,5 +1,4 @@
 class ShortUrlsController < ApplicationController
-
   before_action :find_url, only: [:show, :short]
   skip_before_action :verify_authenticity_token
 
@@ -16,20 +15,24 @@ class ShortUrlsController < ApplicationController
     @url.original_url = params[:original_url]
     @url.sanitize
     if @url.new_url
+
       if @url.save
         redirect_to short_path(@url.shorts_url)
+        #render 'short'
       else
         flash[:error] = "Check the error below:"
         render 'index'
       end
+
     else
       flash[:notice] = "A short link for this Url is already in our database"
       redirect_to short_path(@url.find_duplicate.shorts_url)
     end
+
   end
 
   def short
-    @url = ShortUrl.find_by_short_url(params[:shorts_url])
+    @url = ShortUrl.find_by_shorts_url(params[:shorts_url])
     host = request.host_with_port
     @original_url = @url.sanitize_url
     @shorts_url = host + '/' + @url.shorts_url
@@ -41,12 +44,13 @@ class ShortUrlsController < ApplicationController
   end
 
   private
+
   def find_url
     @url = ShortUrl.find_by_shorts_url(params[:shorts_url])
   end
 
   def url_params
-  params.require(:url).permit(:original_url)
+   params.require(:url).permit(:original_url)
   end
 
 end
