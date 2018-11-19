@@ -1,3 +1,3 @@
 class Categorie < ApplicationRecord
-  belongs_to :micropost
+  has_many :micropost
 end

@@ -6,7 +6,7 @@
 
     <%= f.text_area :content, placeholder: "Post a product" %>
 
-    <%= select("post", "micropost_id", Micropost.all.collect {|p| [p.categories_id, p.id]}, { include_blank: true }) %>
+    <%= f.select(:categories_id, @categories)  %>
 
   </div>
 

@@ -1,9 +1,13 @@
 class MicropostsController < ApplicationController
-before_action :logged_in_user, only: [:create, :destroy]
-before_action :correct_user, only: :destroy
+  before_action :logged_in_user, only: [:create, :destroy]
+  before_action :correct_user, only: :destroy
 
   def create
+
+     @categories = Categorie.all.map{ |u| [u.name, u.id] }
+
      @micropost = current_user.microposts.build(micropost_params)
+
   if @micropost.save
     flash[:success] = "Post Created"
   redirect_to root_url
@@ -11,6 +15,7 @@ before_action :correct_user, only: :destroy
     @feed_items = []
     render 'static_pages/home'
   end
+
   end
 
   def destroy
