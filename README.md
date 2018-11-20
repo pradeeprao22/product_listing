@@ -16,9 +16,11 @@ It contains following features and you can use it for any website application us
 12. Follow and un follow feature and with the list of followers and following view.
 13. Implementing user feed according to user following.
 14. Account activate and password reset system.
-15. I Implemented new module called url short go to this route if you are using localhost, http://localhost:3000/short 
-16. Coming soon (Implementing react on rails so that our components will be more dynamic)
-17. Please contribute to this project.
+15. Adding categories to the product post (Debug) 
+16. Deployment to heroku.
+17. I Implemented new module called url short go to this route if you are using localhost, http://localhost:3000/short 
+18. Coming soon (Implementing react on rails so that our components will be more dynamic)
+19. Please contribute to this project.
 
 Versions:
 Ruby 2.5.1
