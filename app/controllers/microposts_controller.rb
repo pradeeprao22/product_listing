@@ -4,7 +4,6 @@ class MicropostsController < ApplicationController
 
   def create
 
-     @categorie = Categorie.all.map{ |u| [u.name, u.id] }
      @micropost = current_user.microposts.build(micropost_params)
 
   if @micropost.save

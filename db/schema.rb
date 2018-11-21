@@ -10,25 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_18_065305) do
+ActiveRecord::Schema.define(version: 2018_11_21_081304) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "categories", force: :cascade do |t|
-    t.string "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "microposts", force: :cascade do |t|
     t.text "content"
     t.bigint "user_id"
-    t.bigint "categorie_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["categorie_id", "created_at"], name: "index_microposts_on_categorie_id_and_created_at"
-    t.index ["categorie_id"], name: "index_microposts_on_categorie_id"
+    t.string "picture"
     t.index ["user_id", "created_at"], name: "index_microposts_on_user_id_and_created_at"
     t.index ["user_id"], name: "index_microposts_on_user_id"
   end
@@ -79,6 +71,5 @@ ActiveRecord::Schema.define(version: 2018_11_18_065305) do
     t.datetime "reset_sent_at"
   end
 
-  add_foreign_key "microposts", "categories", column: "categorie_id"
   add_foreign_key "microposts", "users"
 end

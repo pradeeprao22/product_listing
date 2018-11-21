@@ -20,7 +20,7 @@ User.create!(username:  "Example User",
   password = "password"
   User.create!(username:  username,
                email: email,
-               password:              password,
+               password: password,
                password_confirmation: password,
                activated: true,
                activated_at: Time.zone.now)
