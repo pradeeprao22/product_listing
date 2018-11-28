@@ -1,5 +1,5 @@
 # Product_Listing
-I am building the product listing web application feel free to contribute to this project. 
+I am building the product listing web application feel free to contribute to this project.
 It contains following features and you can use it for any website application using rails.
 
 1. Login system.
@@ -17,15 +17,15 @@ It contains following features and you can use it for any website application us
 13. Implementing user feed according to user following.
 14. Account activate and password reset system.
 15. Adding categories to the product post (Debug).
-16. Deployment to heroku.
-17. I Implemented new module called url short go to this route if you are using localhost, http://localhost:3000/short 
-18. Coming soon (Implementing react on rails so that our components will be more dynamic)
-19. Please contribute to this project.
-
+16. Deployment through heroku.
+17. I Implemented new module called url short go to this route if you are using localhost, http://localhost:(port)/short.
+18. Admin Dashboard using active admin(Coming Soon) 
+19. Coming soon (Implementing react on rails so that our components will be more dynamic)
+20. Added Product Card in the home page.
+21. Please contribute to this project.
 
 Features Needs to Add to our app
 *Different categories to posts.
-
 
 Versions:
 Ruby 2.5.1
