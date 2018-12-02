@@ -24,7 +24,7 @@ It contains following features and you can use it for any website application us
 17. I Implemented new module called url short go to this route if you are using localhost, http://localhost:(port)/short.
 18. Admin Dashboard using active admin(Coming Soon). 
 19. Coming soon (Implementing react on rails so that our components will be more dynamic).
-20. Added Product Card in the home page.
+20. Added Product Card in the home page(Under Development).
 21. Please contribute to this project.
 
 Features Needs to Add to our app
@@ -37,7 +37,7 @@ Rails 5.2.1
 Change the database.yml file settings according to your db settings before deploying 
 
 Database Used: Postgresql
-Rails sample application for product listing under development
+Rails Web Application for product listing under development
 
 Created and developed by:
 Pradeep Rao Rayapudi feel free to contact me at (pradeepraoiitkgp11@gmail.com)
