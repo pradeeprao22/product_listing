@@ -12,6 +12,7 @@ gem 'bcrypt', '3.1.12'
 gem 'faker'
 gem 'react_on_rails', '~> 11.1', '>= 11.1.8'
 gem 'webpacker', '~> 3'
+gem 'mini_racer'
 gem 'carrierwave', '1.2.2'
 gem 'mini_magick', '4.7.0'
 gem 'omniauth-google-oauth2', '~> 0.2.1'
@@ -75,3 +76,4 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem 'mini_racer', platforms: :ruby
