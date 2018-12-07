@@ -17,8 +17,11 @@ gem 'carrierwave', '1.2.2'
 gem 'mini_magick', '4.7.0'
 gem 'omniauth-google-oauth2', '~> 0.2.1'
 
+#GraphQL gem
+gem 'graphql', '1.7.4'
 #Paginate
 gem 'will_paginate',           '3.1.6'
+#Bootstrap for pagination
 gem 'bootstrap-will_paginate', '1.0.0'
 #bootstrap styles
 gem 'bootstrap-sass', '3.3.7'

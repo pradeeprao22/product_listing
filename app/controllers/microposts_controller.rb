@@ -8,7 +8,7 @@ class MicropostsController < ApplicationController
 
   if @micropost.save
     flash[:success] = "Post Created"
-  redirect_to root_url
+    redirect_to root_url
   else
     @feed_items = []
     render 'static_pages/home'
