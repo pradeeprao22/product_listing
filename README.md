@@ -16,14 +16,14 @@ It contains following features and you can use it for any website application us
 9. Now user can post a product or content.
 10. Now posts are with the pagination feature.
 11. Image upload feature is done using gem (We can control the size of the image inside the uploader file).
-12. Follow and un follow feature and with the list of followers and following view.
+12. Follow and unfollow feature and with the list of followers and following view.
 13. Implementing user feed according to user following.
 14. Account activate and password reset system.
-15. Adding categories to the product post (Debug).
+15. Adding categories (Industry Type) to the product post(Debug).
 16. Deployment through heroku.
 17. I Implemented new module called url short go to this route if you are using localhost, http://localhost:(port)/short.
 18. Admin Dashboard using active admin(Coming Soon). 
-19. Coming soon (Implementing react on rails so that our components will be more dynamic).
+19. Coming soon (Implementing react_on_rails so that our components will be more dynamic).
 20. Added Product Card in the home page(Under Development).
 21. Please contribute to this project.
 
@@ -40,5 +40,5 @@ Database Used: Postgresql
 Rails Web Application for product listing under development
 
 Created and developed by:
-Pradeep Rao Rayapudi feel free to contact me at (pradeepraoiitkgp11@gmail.com)
+Pradeep Rao Rayapudi feel free to contact me at (pradeep.rayapudi93@gmail.com)
 Location: India
