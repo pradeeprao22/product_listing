@@ -4,7 +4,7 @@ class MicropostsController < ApplicationController
 
   def create
 
-     @micropost = current_user.microposts.build(micropost_params)
+     @micropost = current_user.microposts.build(micropost_params)feed_items
 
   if @micropost.save
     flash[:success] = "Post Created"
@@ -30,5 +30,20 @@ class MicropostsController < ApplicationController
   def correct_user
     @micropost = current_user.microposts.find_by(id: params[:id])
     redirect_to root_url if @micropost.nil?
+  end
+end
+
+class ApiVersionConstraint
+  def initialize(version:, default:)
+    @version = version
+    @default = default
+  end
+
+  def version_helper
+    "application/vnd.my-app.v#{}"
+  end
+
+  def matches?(request)
+    @default || request.headers["Accept"].include?(version_helper)
   end
 end
