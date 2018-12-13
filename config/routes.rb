@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'messages/index'
+  get 'conversations/index'
   get '/react', to: 'hello_world#index'
   
   get 'sessions/new'
@@ -27,6 +29,11 @@ Rails.application.routes.draw do
     member do
       get :following, :followers
     end
+  end
+
+  #Messaging system routes
+  resources :conversations, only: [:index, :create] do
+    resources :messages, only: [:index, :create]
   end
 
   resources :account_activations, only: [:edit]
