@@ -32,18 +32,3 @@ class MicropostsController < ApplicationController
     redirect_to root_url if @micropost.nil?
   end
 end
-
-class ApiVersionConstraint
-  def initialize(version:, default:)
-    @version = version
-    @default = default
-  end
-
-  def version_helper
-    "application/vnd.my-app.v#{}"
-  end
-
-  def matches?(request)
-    @default || request.headers["Accept"].include?(version_helper)
-  end
-end
